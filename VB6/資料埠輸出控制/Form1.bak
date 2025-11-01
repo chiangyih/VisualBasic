@@ -1,0 +1,482 @@
+VERSION 5.00
+Begin VB.Form Form1 
+   Caption         =   "Form1"
+   ClientHeight    =   3930
+   ClientLeft      =   60
+   ClientTop       =   345
+   ClientWidth     =   8400
+   LinkTopic       =   "Form1"
+   ScaleHeight     =   3930
+   ScaleWidth      =   8400
+   StartUpPosition =   3  '系統預設值
+   Begin VB.CommandButton Command2 
+      Caption         =   "結束系統"
+      BeginProperty Font 
+         Name            =   "新細明體"
+         Size            =   12
+         Charset         =   136
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   510
+      Left            =   6660
+      TabIndex        =   20
+      Top             =   3015
+      Width           =   1185
+   End
+   Begin VB.CheckBox CtrlOut 
+      Caption         =   "C3"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Index           =   3
+      Left            =   4140
+      TabIndex        =   17
+      Top             =   1350
+      Width           =   690
+   End
+   Begin VB.CheckBox CtrlOut 
+      Caption         =   "C2"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Index           =   2
+      Left            =   3465
+      TabIndex        =   16
+      Top             =   1350
+      Width           =   690
+   End
+   Begin VB.CheckBox CtrlOut 
+      Caption         =   "C1"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Index           =   1
+      Left            =   2790
+      TabIndex        =   15
+      Top             =   1350
+      Width           =   690
+   End
+   Begin VB.CheckBox CtrlOut 
+      Caption         =   "C0"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Index           =   0
+      Left            =   2115
+      TabIndex        =   14
+      Top             =   1350
+      Width           =   690
+   End
+   Begin VB.CheckBox DataOut 
+      Caption         =   "D7"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   420
+      Index           =   7
+      Left            =   6030
+      TabIndex        =   13
+      Top             =   405
+      Width           =   780
+   End
+   Begin VB.CheckBox DataOut 
+      Caption         =   "D6"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   420
+      Index           =   6
+      Left            =   5265
+      TabIndex        =   12
+      Top             =   405
+      Width           =   780
+   End
+   Begin VB.CheckBox DataOut 
+      Caption         =   "D5"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   420
+      Index           =   5
+      Left            =   4500
+      TabIndex        =   11
+      Top             =   405
+      Width           =   780
+   End
+   Begin VB.CheckBox DataOut 
+      Caption         =   "D4"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   420
+      Index           =   4
+      Left            =   3735
+      TabIndex        =   10
+      Top             =   405
+      Width           =   780
+   End
+   Begin VB.CheckBox DataOut 
+      Caption         =   "D3"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   420
+      Index           =   3
+      Left            =   2970
+      TabIndex        =   9
+      Top             =   405
+      Width           =   780
+   End
+   Begin VB.CheckBox DataOut 
+      Caption         =   "D2"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   420
+      Index           =   2
+      Left            =   2205
+      TabIndex        =   8
+      Top             =   405
+      Width           =   780
+   End
+   Begin VB.CheckBox DataOut 
+      Caption         =   "D1"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   420
+      Index           =   1
+      Left            =   1440
+      TabIndex        =   7
+      Top             =   405
+      Width           =   780
+   End
+   Begin VB.CheckBox DataOut 
+      Caption         =   "D0"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   420
+      Index           =   0
+      Left            =   675
+      TabIndex        =   6
+      Top             =   405
+      Width           =   780
+   End
+   Begin VB.CommandButton Command1 
+      Caption         =   "讀取狀態"
+      BeginProperty Font 
+         Name            =   "新細明體"
+         Size            =   12
+         Charset         =   136
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   510
+      Left            =   6660
+      TabIndex        =   5
+      Top             =   2250
+      Width           =   1185
+   End
+   Begin VB.Label Label3 
+      AutoSize        =   -1  'True
+      Caption         =   "控制輸出"
+      BeginProperty Font 
+         Name            =   "新細明體"
+         Size            =   12
+         Charset         =   136
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00800000&
+      Height          =   240
+      Left            =   2925
+      TabIndex        =   19
+      Top             =   1080
+      Width           =   960
+   End
+   Begin VB.Label Label2 
+      AutoSize        =   -1  'True
+      Caption         =   "資料輸出"
+      BeginProperty Font 
+         Name            =   "新細明體"
+         Size            =   12
+         Charset         =   136
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H000000C0&
+      Height          =   240
+      Left            =   2925
+      TabIndex        =   18
+      Top             =   90
+      Width           =   960
+   End
+   Begin VB.Label Label1 
+      AutoSize        =   -1  'True
+      Caption         =   "狀態5"
+      BeginProperty Font 
+         Name            =   "新細明體"
+         Size            =   12
+         Charset         =   136
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   240
+      Index           =   4
+      Left            =   5355
+      TabIndex        =   4
+      Top             =   2205
+      Width           =   600
+   End
+   Begin VB.Label Label1 
+      AutoSize        =   -1  'True
+      Caption         =   "狀態4"
+      BeginProperty Font 
+         Name            =   "新細明體"
+         Size            =   12
+         Charset         =   136
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   240
+      Index           =   3
+      Left            =   4275
+      TabIndex        =   3
+      Top             =   2205
+      Width           =   600
+   End
+   Begin VB.Label Label1 
+      AutoSize        =   -1  'True
+      Caption         =   "狀態3"
+      BeginProperty Font 
+         Name            =   "新細明體"
+         Size            =   12
+         Charset         =   136
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   240
+      Index           =   2
+      Left            =   3240
+      TabIndex        =   2
+      Top             =   2205
+      Width           =   600
+   End
+   Begin VB.Label Label1 
+      AutoSize        =   -1  'True
+      Caption         =   "狀態2"
+      BeginProperty Font 
+         Name            =   "新細明體"
+         Size            =   12
+         Charset         =   136
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   240
+      Index           =   1
+      Left            =   2205
+      TabIndex        =   1
+      Top             =   2205
+      Width           =   600
+   End
+   Begin VB.Shape PtrStatus 
+      FillStyle       =   0  '實心
+      Height          =   600
+      Index           =   4
+      Left            =   5220
+      Shape           =   3  '圓形
+      Top             =   2520
+      Width           =   600
+   End
+   Begin VB.Label Label1 
+      AutoSize        =   -1  'True
+      Caption         =   "狀態1"
+      BeginProperty Font 
+         Name            =   "新細明體"
+         Size            =   12
+         Charset         =   136
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   240
+      Index           =   0
+      Left            =   1215
+      TabIndex        =   0
+      Top             =   2205
+      Width           =   600
+   End
+   Begin VB.Shape PtrStatus 
+      FillStyle       =   0  '實心
+      Height          =   600
+      Index           =   3
+      Left            =   4275
+      Shape           =   3  '圓形
+      Top             =   2520
+      Width           =   600
+   End
+   Begin VB.Shape PtrStatus 
+      FillStyle       =   0  '實心
+      Height          =   600
+      Index           =   2
+      Left            =   3240
+      Shape           =   3  '圓形
+      Top             =   2520
+      Width           =   600
+   End
+   Begin VB.Shape PtrStatus 
+      FillStyle       =   0  '實心
+      Height          =   600
+      Index           =   1
+      Left            =   2250
+      Shape           =   3  '圓形
+      Top             =   2520
+      Width           =   600
+   End
+   Begin VB.Shape PtrStatus 
+      FillStyle       =   0  '實心
+      Height          =   600
+      Index           =   0
+      Left            =   1170
+      Shape           =   3  '圓形
+      Top             =   2520
+      Width           =   600
+   End
+End
+Attribute VB_Name = "Form1"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Dim PtrAddress As Long          '印表機埠變數
+Dim DataOutValue As Integer  '資料埠變數
+Dim CtrlOutValue As Integer    '控制埠變數
+
+Private Sub Command1_Click()
+  
+End Sub
+
+Private Sub Command2_Click()
+  DIO_OutputByte PtrAddress, 0    '印表機埠資料線清空
+  End
+End Sub
+
+Private Sub CtrlOut_Click(Index As Integer)
+    If CtrlOut(Index).Value = 1 Then
+    CtrlOutValue = CtrlOutValue Or 2 ^ Index
+  Else
+    CtrlOutValue = CtrlOutValue And (255 - 2 ^ Index)
+  End If
+  DIO_OutputByte PtrAddress + 2, CtrlOutValue
+
+End Sub
+
+Private Sub DataOut_Click(Index As Integer)
+  If DataOut(Index).Value = 1 Then
+    DataOutValue = DataOutValue Or 2 ^ Index
+  Else
+    DataOutValue = DataOutValue And (255 - 2 ^ Index)
+  End If
+  DIO_OutputByte PtrAddress, DataOutValue
+End Sub
+
+Private Sub Form_Load()
+ PtrAddress = &H378
+ OutValue = 0
+ DIO_OutputByte PtrAddress, OutValue
+End Sub

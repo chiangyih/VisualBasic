@@ -1,0 +1,137 @@
+*****************************************
+歡迎使用睿意科技套件    K27 PC控 步進馬達
+*****************************************
+
+本套件所附的兩個檔案：AVIO.DLL、AVIO.EXE
+AVIO.DLL是一個動態連結程式檔，在操作步進馬達之前，請將AVIO.DLL放在
+Window的目錄下。
+AVIO.EXE是一個執行檔，你的電腦必須安裝Visual Basic的軟體，才可執行。
+
+如果對程式有問題或有更好的程式寫法，歡迎來信指教，E-mail：service@aviosys.com
+
+以下是VB程式的原始碼
+
+這是welcom.frm的程式碼
+-------------------------------------------
+Private Sub Form_Resize()
+welcom.Width = 8130
+welcom.Height = 7455
+End Sub
+
+Private Sub into_Click()
+motor.Show vbModal
+End Sub
+-------------------------------------------
+
+這是motor.frm的程式碼
+-------------------------------------------
+'宣告及定義變數
+Option Explicit
+Private Declare Function AVIO_OUT_LPT1 Lib "AVIO.dll" (ByVal PortData As Integer) As Integer
+Dim i, X As Integer
+Dim bExit As Boolean
+Dim Index As Integer
+-------------------------------------------
+Private Sub stop_Click()
+Timer1.Enabled = False
+Timer2.Enabled = False
+Timer3.Enabled = False
+bExit = True
+End Sub
+
+Private Sub exit_Click()
+Unload motor
+Unload welcom
+End Sub
+
+Private Sub Form_Resize()
+motor.Height = 6345
+motor.Width = 7080
+End Sub
+
+Private Sub rtun_Click()
+Timer1.Enabled = True
+Timer2.Enabled = True
+Timer3.Enabled = False
+bExit = False
+While Not bExit
+    AVIO_OUT_LPT1 (&H19)
+    Call Timer1_Timer
+DoEvents
+    AVIO_OUT_LPT1 (&H39)
+    Call Timer1_Timer
+DoEvents
+    AVIO_OUT_LPT1 (&H13)
+    Call Timer1_Timer
+DoEvents
+    AVIO_OUT_LPT1 (&H33)
+    Call Timer1_Timer
+DoEvents
+    AVIO_OUT_LPT1 (&H16)
+    Call Timer1_Timer
+DoEvents
+    AVIO_OUT_LPT1 (&H36)
+    Call Timer1_Timer
+DoEvents
+    AVIO_OUT_LPT1 (&H1C)
+    Call Timer1_Timer
+DoEvents
+    AVIO_OUT_LPT1 (&H3C)
+    Call Timer1_Timer
+DoEvents
+Wend
+End Sub
+
+Private Sub ltun_Click()
+Timer3.Enabled = True
+Timer2.Enabled = False
+Timer1.Enabled = True
+bExit = False
+While Not bExit
+    AVIO_OUT_LPT1 (&H19)
+    Call Timer1_Timer
+DoEvents
+    AVIO_OUT_LPT1 (&H39)
+    Call Timer1_Timer
+DoEvents
+    AVIO_OUT_LPT1 (&H1C)
+    Call Timer1_Timer
+DoEvents
+    AVIO_OUT_LPT1 (&H3C)
+    Call Timer1_Timer
+DoEvents
+    AVIO_OUT_LPT1 (&H16)
+    Call Timer1_Timer
+DoEvents
+    AVIO_OUT_LPT1 (&H36)
+    Call Timer1_Timer
+DoEvents
+    AVIO_OUT_LPT1 (&H13)
+    Call Timer1_Timer
+DoEvents
+    AVIO_OUT_LPT1 (&H33)
+    Call Timer1_Timer
+DoEvents
+Wend
+End Sub
+
+Private Sub Timer1_Timer()
+For i = 1 To 65535
+X = X * 2
+X = X / 2
+Next
+End Sub
+
+Private Sub Timer3_Timer()
+Set motor.Picture = Image1(Index).Picture
+Index = Index - 1
+If Index < 0 Then Index = 3
+End Sub
+
+Private Sub Timer2_Timer()
+Set motor.Picture = Image1(Index).Picture
+Index = Index + 1
+If Index > 3 Then Index = 0
+End Sub
+
+睿意科技  敬上

@@ -1,0 +1,39 @@
+﻿Imports System.Diagnostics
+
+' CPU 使用率監控程式
+Public Class Form1
+    Private cpuCounter As PerformanceCounter '效能計數器物件
+    Private WithEvents updateTimer As New Timer() '計時器物件
+
+    ' 表單載入時初始化
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' 建立 CPU 效能計數器 (_Total 代表所有核心的總和)
+        cpuCounter = New PerformanceCounter("Processor", "% Processor Time", "_Total")
+        cpuCounter.NextValue() '第一次呼叫初始化，通常回傳 0
+        updateTimer.Interval = 500 '每 0.5 秒更新一次
+    End Sub
+
+    ' 啟動監控
+    Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
+        btnStart.Enabled = False
+        updateTimer.Start()
+    End Sub
+
+    ' 每次計時器觸發時更新 CPU 使用率
+    Private Sub updateTimer_Tick(sender As Object, e As EventArgs) Handles updateTimer.Tick
+        Dim cpuUsage As Integer = CInt(Math.Round(cpuCounter.NextValue()))
+        lblCpu.Text = $"CPU: {cpuUsage} %"
+    End Sub
+
+    ' 關閉程式
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    ' 表單關閉時釋放資源
+    Protected Overrides Sub OnFormClosing(e As FormClosingEventArgs)
+        MyBase.OnFormClosing(e)
+        updateTimer.Stop()
+        cpuCounter?.Dispose()
+    End Sub
+End Class

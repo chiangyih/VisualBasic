@@ -1,0 +1,47 @@
+﻿Imports System.Diagnostics
+
+Public Class Form1
+    Private cpuCounter As PerformanceCounter
+    Private WithEvents updateTimer As New System.Windows.Forms.Timer()
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Initialize PerformanceCounter for total CPU usage
+        cpuCounter = New PerformanceCounter("Processor", "% Processor Time", "_Total")
+        ' First call to NextValue returns 0, so call once to initialize
+        cpuCounter.NextValue()
+
+        updateTimer.Interval = 1000 ' 1 second
+    End Sub
+
+    Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
+        btnStart.Enabled = False
+        updateTimer.Start()
+    End Sub
+
+    Private Sub updateTimer_Tick(sender As Object, e As EventArgs) Handles updateTimer.Tick
+        Try
+            Dim value As Single = cpuCounter.NextValue()
+            ' Round to nearest integer to match Task Manager display
+            Dim display As Integer = CInt(Math.Round(value))
+            lblCpu.Text = $"CPU: {display} %"
+        Catch ex As Exception
+            lblCpu.Text = "Error"
+        End Try
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    Protected Overrides Sub OnFormClosing(e As FormClosingEventArgs)
+        MyBase.OnFormClosing(e)
+        Try
+            updateTimer.Stop()
+        Catch
+        End Try
+        Try
+            cpuCounter?.Dispose()
+        Catch
+        End Try
+    End Sub
+End Class

@@ -1,0 +1,65 @@
+﻿Imports System.Diagnostics
+
+' 主視窗，負責顯示 CPU 使用率並處理啟動/結束按鈕
+Public Class Form1
+    ' 用來讀取整台機器的總 CPU 使用率
+    Private cpuCounter As PerformanceCounter
+    ' 使用 Windows Forms 的 Timer 每秒更新畫面
+    Private WithEvents updateTimer As New System.Windows.Forms.Timer()
+
+    ' 表單載入時初始化 PerformanceCounter 與 Timer
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' 初始化用來取得總 CPU 使用率的 PerformanceCounter
+        ' 類別: "Processor"，計數器: "% Processor Time"，實例: "_Total"代表所有核心的總和
+        cpuCounter = New PerformanceCounter("Processor", "% Processor Time", "_Total")
+        ' 注意：第一次呼叫 NextValue() 通常會回傳0，必須先呼叫一次以初始化內部計算
+        cpuCounter.NextValue()
+
+        ' 設定更新間隔為1000 毫秒 (1 秒)
+        updateTimer.Interval = 1000 ' 1 second
+    End Sub
+
+    ' Start 按鈕被點擊後開始計時並更新顯示，並停用 Start 按鈕以避免重複啟動
+    Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
+        btnStart.Enabled = False
+        updateTimer.Start()
+    End Sub
+
+    ' Timer 的 Tick事件，會在每次計時器觸發時讀取 CPU 值並更新 Label 顯示
+    Private Sub updateTimer_Tick(sender As Object, e As EventArgs) Handles updateTimer.Tick
+        Try
+            ' 讀取當前 CPU 使用率 (百分比)，為單精度浮點數
+            Dim value As Single = cpuCounter.NextValue()
+            ' 四捨五入為整數以接近工作管理員的顯示方式
+            Dim display As Integer = CInt(Math.Round(value))
+            lblCpu.Text = $"CPU: {display} %"
+        Catch ex As Exception
+            ' 若讀取失敗，顯示錯誤提示（可進一步擴充為紀錄錯誤）
+            lblCpu.Text = "Error"
+        End Try
+    End Sub
+
+    ' Exit 按鈕關閉程式
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    ' 表單關閉時停止計時器並釋放 PerformanceCounter 的資源
+    Protected Overrides Sub OnFormClosing(e As FormClosingEventArgs)
+        MyBase.OnFormClosing(e)
+        Try
+            updateTimer.Stop()
+        Catch
+        End Try
+        Try
+            ' 使用安全的 Null-conditional 呼叫以避免在尚未建立時發生例外
+            cpuCounter?.Dispose()
+        Catch
+        End Try
+    End Sub
+
+    ' Label 的 Click事件目前不處理任何動作，保留為空方法以避免例外
+    Private Sub lblCpu_Click(sender As Object, e As EventArgs) Handles lblCpu.Click
+
+    End Sub
+End Class
