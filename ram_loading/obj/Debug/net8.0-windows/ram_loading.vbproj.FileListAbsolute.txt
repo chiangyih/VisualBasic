@@ -1,0 +1,17 @@
+C:\Users\tseng\OneDrive\03_各類實作\VisualBasic\ram_loading\bin\Debug\net8.0-windows\ram_loading.exe
+C:\Users\tseng\OneDrive\03_各類實作\VisualBasic\ram_loading\bin\Debug\net8.0-windows\ram_loading.deps.json
+C:\Users\tseng\OneDrive\03_各類實作\VisualBasic\ram_loading\bin\Debug\net8.0-windows\ram_loading.runtimeconfig.json
+C:\Users\tseng\OneDrive\03_各類實作\VisualBasic\ram_loading\bin\Debug\net8.0-windows\ram_loading.dll
+C:\Users\tseng\OneDrive\03_各類實作\VisualBasic\ram_loading\bin\Debug\net8.0-windows\ram_loading.pdb
+C:\Users\tseng\OneDrive\03_各類實作\VisualBasic\ram_loading\obj\Debug\net8.0-windows\ram_loading.Form1.resources
+C:\Users\tseng\OneDrive\03_各類實作\VisualBasic\ram_loading\obj\Debug\net8.0-windows\ram_loading.vbproj.GenerateResource.cache
+C:\Users\tseng\OneDrive\03_各類實作\VisualBasic\ram_loading\obj\Debug\net8.0-windows\ram_loading.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tseng\OneDrive\03_各類實作\VisualBasic\ram_loading\obj\Debug\net8.0-windows\ram_loading.AssemblyInfoInputs.cache
+C:\Users\tseng\OneDrive\03_各類實作\VisualBasic\ram_loading\obj\Debug\net8.0-windows\ram_loading.AssemblyInfo.vb
+C:\Users\tseng\OneDrive\03_各類實作\VisualBasic\ram_loading\obj\Debug\net8.0-windows\ram_loading.vbproj.CoreCompileInputs.cache
+C:\Users\tseng\OneDrive\03_各類實作\VisualBasic\ram_loading\obj\Debug\net8.0-windows\ram_loading.sourcelink.json
+C:\Users\tseng\OneDrive\03_各類實作\VisualBasic\ram_loading\obj\Debug\net8.0-windows\ram_loading.dll
+C:\Users\tseng\OneDrive\03_各類實作\VisualBasic\ram_loading\obj\Debug\net8.0-windows\refint\ram_loading.dll
+C:\Users\tseng\OneDrive\03_各類實作\VisualBasic\ram_loading\obj\Debug\net8.0-windows\ram_loading.pdb
+C:\Users\tseng\OneDrive\03_各類實作\VisualBasic\ram_loading\obj\Debug\net8.0-windows\ram_loading.genruntimeconfig.cache
+C:\Users\tseng\OneDrive\03_各類實作\VisualBasic\ram_loading\obj\Debug\net8.0-windows\ref\ram_loading.dll

@@ -1,0 +1,76 @@
+﻿Imports System.Diagnostics
+
+Public Class Form1
+    ' 效能計數器用於讀取記憶體使用率
+    Private memoryCounter As PerformanceCounter
+    Private isMonitoring As Boolean = False
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' 初始化效能計數器
+        ' 使用 Memory\% Committed Bytes In Use 來獲得與工作管理員一致的記憶體使用率
+        Try
+            memoryCounter = New PerformanceCounter("Memory", "% Committed Bytes In Use")
+            ' 預先呼叫一次以初始化計數器
+            memoryCounter.NextValue()
+        Catch ex As Exception
+            MessageBox.Show("無法初始化記憶體計數器: " & ex.Message, "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
+        If Not isMonitoring Then
+            ' 啟動監控
+            tmrUpdate.Start()
+            isMonitoring = True
+            btnStart.Text = "停止監控"
+            btnStart.BackColor = Color.LightCoral
+        Else
+            ' 停止監控
+            tmrUpdate.Stop()
+            isMonitoring = False
+            btnStart.Text = "啟動監控"
+            btnStart.BackColor = SystemColors.Control
+        End If
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        ' 清理資源並結束程式
+        If memoryCounter IsNot Nothing Then
+            memoryCounter.Dispose()
+        End If
+        Application.Exit()
+    End Sub
+
+    Private Sub tmrUpdate_Tick(sender As Object, e As EventArgs) Handles tmrUpdate.Tick
+        ' 每秒更新記憶體使用率
+        Try
+            If memoryCounter IsNot Nothing Then
+                Dim memoryUsage As Single = memoryCounter.NextValue()
+                lblMemoryUsage.Text = memoryUsage.ToString("F1") & " %"
+
+                ' 根據使用率改變顏色
+                If memoryUsage < 50 Then
+                    lblMemoryUsage.ForeColor = Color.Green
+                ElseIf memoryUsage < 80 Then
+                    lblMemoryUsage.ForeColor = Color.Orange
+                Else
+                    lblMemoryUsage.ForeColor = Color.Red
+                End If
+            End If
+        Catch ex As Exception
+            MessageBox.Show("讀取記憶體使用率時發生錯誤: " & ex.Message, "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            tmrUpdate.Stop()
+            isMonitoring = False
+            btnStart.Text = "啟動監控"
+            btnStart.BackColor = SystemColors.Control
+        End Try
+    End Sub
+
+    Protected Overrides Sub OnFormClosing(e As FormClosingEventArgs)
+        ' 關閉表單時清理資源
+        If memoryCounter IsNot Nothing Then
+            memoryCounter.Dispose()
+        End If
+        MyBase.OnFormClosing(e)
+    End Sub
+End Class

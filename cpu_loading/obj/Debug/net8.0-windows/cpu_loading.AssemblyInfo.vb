@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("cpu_loading"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74c02f43037f5fcfbc7f973d6cf22571991afac8"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("cpu_loading"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("cpu_loading"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

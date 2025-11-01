@@ -1,0 +1,91 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\tseng\\OneDrive\\03_\u5404\u985E\u5BE6\u4F5C\\VisualBasic\\ram_loading\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E844F1AB-4B71-4D3F-A48F-6DC5A1BAA98B}|ram_loading.vbproj|c:\\users\\tseng\\onedrive\\03_\u5404\u985E\u5BE6\u4F5C\\visualbasic\\ram_loading\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{E844F1AB-4B71-4D3F-A48F-6DC5A1BAA98B}|ram_loading.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E844F1AB-4B71-4D3F-A48F-6DC5A1BAA98B}|ram_loading.vbproj|c:\\users\\tseng\\onedrive\\03_\u5404\u985E\u5BE6\u4F5C\\visualbasic\\ram_loading\\spec.md||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E844F1AB-4B71-4D3F-A48F-6DC5A1BAA98B}|ram_loading.vbproj|solutionrelative:spec.md||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E844F1AB-4B71-4D3F-A48F-6DC5A1BAA98B}|ram_loading.vbproj|c:\\users\\tseng\\onedrive\\03_\u5404\u985E\u5BE6\u4F5C\\visualbasic\\ram_loading\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{E844F1AB-4B71-4D3F-A48F-6DC5A1BAA98B}|ram_loading.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E844F1AB-4B71-4D3F-A48F-6DC5A1BAA98B}|ram_loading.vbproj|c:\\users\\tseng\\onedrive\\03_\u5404\u985E\u5BE6\u4F5C\\visualbasic\\ram_loading\\form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{E844F1AB-4B71-4D3F-A48F-6DC5A1BAA98B}|ram_loading.vbproj|solutionrelative:form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\Users\\tseng\\OneDrive\\03_\u5404\u985E\u5BE6\u4F5C\\VisualBasic\\ram_loading\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\Users\\tseng\\OneDrive\\03_\u5404\u985E\u5BE6\u4F5C\\VisualBasic\\ram_loading\\Form1.vb",
+              "RelativeToolTip": "Form1.vb",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-01T09:09:50.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\tseng\\OneDrive\\03_\u5404\u985E\u5BE6\u4F5C\\VisualBasic\\ram_loading\\Form1.Designer.vb",
+              "RelativeDocumentMoniker": "Form1.Designer.vb",
+              "ToolTip": "C:\\Users\\tseng\\OneDrive\\03_\u5404\u985E\u5BE6\u4F5C\\VisualBasic\\ram_loading\\Form1.Designer.vb",
+              "RelativeToolTip": "Form1.Designer.vb",
+              "ViewState": "AgIAAGMAAAAAAAAAAABZwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-01T09:09:31.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "spec.md",
+              "DocumentMoniker": "C:\\Users\\tseng\\OneDrive\\03_\u5404\u985E\u5BE6\u4F5C\\VisualBasic\\ram_loading\\spec.md",
+              "RelativeDocumentMoniker": "spec.md",
+              "ToolTip": "C:\\Users\\tseng\\OneDrive\\03_\u5404\u985E\u5BE6\u4F5C\\VisualBasic\\ram_loading\\spec.md",
+              "RelativeToolTip": "spec.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-01T09:00:45.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.vb [\u8A2D\u8A08]",
+              "DocumentMoniker": "C:\\Users\\tseng\\OneDrive\\03_\u5404\u985E\u5BE6\u4F5C\\VisualBasic\\ram_loading\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\Users\\tseng\\OneDrive\\03_\u5404\u985E\u5BE6\u4F5C\\VisualBasic\\ram_loading\\Form1.vb [\u8A2D\u8A08]",
+              "RelativeToolTip": "Form1.vb [\u8A2D\u8A08]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-01T08:58:30.918Z",
+              "EditorCaption": " [\u8A2D\u8A08]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
